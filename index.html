@@ -518,6 +518,44 @@ img {
     height: 40px; 
   }
 }
+/* ─── MEDIA QUERIES (MÓVILES) DISEÑO LINEAL PDF ─── */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 5px !important;
+    gap: 2px !important;
+    width: 100% !important;
+    overflow-x: hidden !important; /* Desactiva el deslizamiento */
+  }
+  
+  .nav-links {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    gap: 3px !important;
+    width: 100% !important;
+  }
+  
+  /* Tamaños compactos para forzar la línea única en móviles */
+  .nav-logo img {
+    height: 20px !important; 
+    flex-shrink: 0 !important;
+  }
+  
+  .nav-links img {
+    height: 11px !important; /* Textos compactos para que quepan todos */
+    flex-shrink: 0 !important;
+  }
+  
+  .nav-donar img {
+    height: 20px !important; 
+    flex-shrink: 0 !important;
+  }
+}
 </style>
 </head>
 <body>
