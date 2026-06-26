@@ -437,6 +437,67 @@ img {
   /* Reducimos la altura del fondo para que no ocupe toda la pantalla */
   .hero { min-height: 400px; }
 }
+/* =========================================
+   DISEÑO RESPONSIVO (TELÉFONOS CELULARES)
+========================================= */
+
+/* Para pantallas de celulares estándar y tablets pequeñas (hasta 768px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px; /* Reducimos el padding lateral para ganar espacio */
+    justify-content: center; /* Centramos el contenido */
+    gap: 15px;
+  }
+  
+  .nav-logo img {
+    height: 40px; /* Achicamos ligeramente el logo */
+  }
+
+  .nav-links {
+    gap: 15px; /* Reducimos el espacio entre los iconos/enlaces */
+  }
+
+  .nav-links img {
+    height: 26px; /* Iconos más pequeños para que quepan en la misma línea */
+  }
+
+  .nav-donar img {
+    height: 42px; /* Botón de donar escalado a la pantalla */
+  }
+
+  .hero {
+    min-height: 400px; /* Reducimos la altura del hero para que no quede un espacio vacío gigante en móviles */
+    background-position: top center;
+  }
+}
+
+/* Para pantallas de celulares muy pequeños (hasta 480px) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 5px; /* Minimizamos el borde lateral */
+    gap: 10px;
+  }
+
+  .nav-logo img {
+    height: 32px; /* Logo aún más compacto */
+  }
+
+  .nav-links {
+    gap: 8px; /* Enlaces más juntos para evitar que salten a otra línea */
+  }
+
+  .nav-links img {
+    height: 20px; /* Iconos reducidos al tamaño adecuado */
+  }
+
+  .nav-donar img {
+    height: 35px; /* Botón en proporción a la pantalla pequeña */
+  }
+
+  .hero {
+    min-height: 300px; /* Altura ideal para celulares muy angostos */
+  }
+}
 </style>
 </head>
 <body>
