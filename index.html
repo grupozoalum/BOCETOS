@@ -373,17 +373,51 @@ img {
 }
 .patro-proximamente img { max-width:380px; width:70%; opacity:0.9; }
 /* ─── MEDIA QUERIES (MÓVILES) ─── */
+/* ─── MEDIA QUERIES (MÓVILES) - DISEÑO LINEAL POR PORCENTAJES ─── */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 15px 20px;
-    gap: 15px;
-    text-align: center;
+    flex-wrap: nowrap !important;
+    padding: 8px 5px !important;
+    gap: 0 !important;
+    justify-content: space-between !important;
+    width: 100% !important;
   }
-  .nav-links { gap: 15px; }
-  .nav-logo img, .nav-donar img { height: 45px; }
-  .nav-links img { height: 28px; }
-  .hero { min-height: 400px; }
+
+  /* 1. Dividimos el ancho total de la pantalla */
+  .nav-logo { 
+    width: 18% !important; 
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .nav-links { 
+    width: 60% !important; 
+    flex-wrap: nowrap !important;
+    gap: 2px !important;
+    justify-content: space-evenly !important;
+  }
+  
+  .nav-donar { 
+    width: 18% !important; 
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* 2. Obligamos a las imágenes a adaptarse a su caja sin deformarse */
+  .nav-logo img, 
+  .nav-donar img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 45px !important; /* Un límite para que no crezcan de más */
+    object-fit: contain !important;
+  }
+
+  /* 3. Ajustamos los 5 botones del menú para que quepan en su 60% */
+  .nav-links img {
+    width: 18% !important; /* 5 imágenes x 18% = 90% (dejando un margen de respiro) */
+    height: auto !important;
+    object-fit: contain !important;
+  }
 }
 /* ─── ESTILOS DE SECCIONES (MÓVIL) ─── */
 .seccion {
